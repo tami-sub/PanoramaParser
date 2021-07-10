@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Panorama</string>
+    <string name="image1">First Image</string>
+    <string name="image2">Second Image</string>
+    <string name="image3">Third Image</string>
+    <string name="news">Лента новостей</string>
+</resources>
