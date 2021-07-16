@@ -52,7 +52,6 @@ public class MyRunnable implements Runnable {
                 new ImageLoadTask(url, image[i]).execute();
                 text[i].setText(title);
             }
-//           Picasso.with(this).load(url).into(image);
         }
     }
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,7 +13,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final ImageView[] image = new ImageView[10];
     private final TextView[] text = new TextView[10];
-    Thread secThread;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         init();
 
-//        Picasso.with(this).load(tempUrl).into(image);
     }
 
 //    @Override
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void init(){
         MyRunnable runnable = new MyRunnable(image, text);
-        secThread = new Thread(runnable);
+        Thread secThread = new Thread(runnable);
         secThread.start();
     }
 
@@ -48,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        System.out.println("CHECK     " + view.getId());
 //        System.out.println("CHECK     " + getResources().getIdentifier("textImage0", "id", getPackageName()));
 //        Intent intent = new Intent((MainActivity.this), Post.class);
-        }
+    }
 
 }
 
